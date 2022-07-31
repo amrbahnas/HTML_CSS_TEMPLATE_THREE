@@ -170,7 +170,6 @@ a {
 @media (max-width: 767px) {
     .header .container .nav .megamenu {
         flex-direction: column;
-        gap: 0;
         padding: 5px;
         align-items: flex-start;
     }
@@ -178,6 +177,7 @@ a {
 
 .header .container .nav .megamenu img {
     flex-basis: 45%;
+    min-width: 400px;
     max-width: 100%;
 }
 
@@ -191,6 +191,7 @@ a {
     display: flex;
     flex-basis: 50%;
     justify-content: space-between;
+    min-width: 565px;
 
 }
 
@@ -198,6 +199,7 @@ a {
     .header .container .nav .megamenu .links {
         flex-direction: column;
         padding: 5px;
+        min-width: 265px;
     }
 }
 
@@ -237,6 +239,8 @@ a {
     font-weight: bold;
     padding: 20px;
     color: var(--main-color);
+    width: 509px;
+
 }
 
 .header .container .nav .megamenu .links ul li a i {
@@ -277,7 +281,8 @@ a {
 @media (max-width:979px) {
     .landing .container {
         flex-direction: column;
-
+        background-image: url(../imgs/landing2.jpg);
+        background-size: cover;
     }
 }
 
@@ -316,6 +321,7 @@ a {
 @media (max-width: 767px) {
     .landing .text h1 {
         font-size: 28px;
+        color: white;
     }
 }
 
@@ -331,6 +337,7 @@ a {
 @media (max-width: 767px) {
     .landing .text p {
         font-size: 18px;
+        color: #ddd;
     }
 }
 
