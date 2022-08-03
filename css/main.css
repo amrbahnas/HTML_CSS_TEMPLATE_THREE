@@ -281,6 +281,11 @@ a {
 @media (max-width:979px) {
     .landing .container {
         flex-direction: column;
+    }
+}
+
+@media (max-width:767px) {
+    .landing .container {
         background-image: url(../imgs/landing2.jpg);
         background-size: cover;
     }
