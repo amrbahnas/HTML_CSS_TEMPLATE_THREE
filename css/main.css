@@ -438,12 +438,19 @@ a {
 
 .articles .container .articles_content .box {
     border-radius: 10px;
-    box-shadow: 0 0 10px #666;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgb(0 0 0 /10%);
+    transition: transform var(--main-transition), box-shadow var(--main-transition);
+}
+
+.articles .container .articles_content .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgb(0 0 0 /20%);
 }
 
 .articles .container .articles_content .box .image img {
-    border-radius: 10px;
     width: 100%;
+    max-width: 100%;
 }
 
 .articles .container .articles_content .box .text {
@@ -479,12 +486,17 @@ a {
     font-size: 20px;
 }
 
+.articles .container .articles_content .box:hover i {
+    animation: arrowx 0.6s infinite linear;
+}
+
 /* end articles */
 
 /* start gallery */
 .gallery {
     padding-top: 50px;
     padding-bottom: 50px;
+    position: relative;
     background-color: rgb(204, 199, 199);
 }
 
@@ -497,13 +509,39 @@ a {
 .gallery .container .gallery_content .box {
     padding: 10px;
     background-color: white;
+    box-shadow: 0px 12px 20px 0px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px 0px rgb(0 0 0 / 12%);
 }
 
-.gallery .container .gallery_content .box img {
-    width: 100%;
-    height: 340px;
+.gallery .container .gallery_content .box .image {
+    position: relative;
+    overflow: hidden;
 }
 
+.gallery .container .gallery_content .box .image::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255 255 255 / 20%);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.gallery .container .gallery_content .box .image:hover::before {
+    animation: flashing 0.7s;
+}
+
+.gallery .container .gallery_content .box .image img {
+    transition: var(--main-transition);
+    max-width: 100%;
+}
+
+.gallery .container .gallery_content .box .image:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
 
 /* end gallery */
 
@@ -702,6 +740,26 @@ a {
         border-radius: 0;
         height: 100%;
         width: 100%;
+    }
+}
+
+@keyframes arrowx {
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes flashing {
+
+    0%,
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        width: 200%;
+        height: 200%;
     }
 }
 
