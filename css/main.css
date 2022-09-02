@@ -1072,7 +1072,7 @@ a {
     position: absolute;
     content: attr(data_pro);
     right: 0;
-    top: -40px;
+    top: -45px;
     color: var(--main-color);
     border: 1px solid var(--section-background);
     padding: 5px;
