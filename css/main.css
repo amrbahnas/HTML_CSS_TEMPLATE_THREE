@@ -896,6 +896,201 @@ a {
 
 /* end team_members */
 
+
+/* start services */
+
+.services {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--section-background);
+
+}
+
+.services .container {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+
+.services .container .box {
+    background-color: white;
+    counter-increment: services;
+    box-shadow: 0 0 5px rgb(188, 186, 186);
+    position: relative;
+    transition: var(--main-transition);
+}
+
+.services .container .box::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    top: 0;
+    background-color: var(--main-color);
+    height: 5px;
+    left: 0;
+    transition: var(--main-transition);
+}
+
+.services .container .box:hover {
+    transform: translateY(-10px);
+}
+
+.services .container .box:hover::after {
+    width: 100%;
+}
+
+.services .container .box .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+}
+
+.services .container .box .head i {
+    color: #d5d5d5;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.services .container .box .head p {
+    color: var(--main-color-alt);
+    font-weight: bold;
+    text-transform: capitalize;
+
+
+}
+
+.services .container .box .footer {
+    position: relative;
+    height: 30px;
+    background-color: #fafafa;
+    padding: 0 20px;
+
+}
+
+.services .container .box .footer a {
+    display: block;
+    text-align: right;
+    color: var(--main-color-alt);
+    height: 100%;
+    line-height: 27px;
+
+}
+
+.services .container .box .footer::before {
+    content: "0" counter(services);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 10px;
+    align-items: center;
+    top: 0;
+    left: 0;
+
+}
+
+.services .container .box .footer::after {
+    left: 45px;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    background-color: #d5d5d5;
+    top: 0;
+    transform: skewx(-35deg);
+
+}
+
+/* end services */
+
+
+/* start skills */
+.skills {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.skills .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width:997px) {
+    .skills .container {
+        flex-direction: column;
+    }
+
+    .skills .container>div {
+        width: 100%;
+    }
+}
+
+.skills .container .pro_holder h4 {
+    color: black;
+    margin: 20px 0;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.skills .container .pro_container {
+    flex-basis: 60%;
+}
+
+.skills .container .image {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width:997px) {
+    .skills .container .image {
+        justify-content: center;
+    }
+}
+
+.skills .container .pro_holder .pro {
+    background-color: var(--section-background);
+    position: relative;
+
+    height: 30px;
+}
+
+.skills .container .pro_holder .pro::after {
+    position: absolute;
+    content: attr(data_pro);
+    right: 0;
+    top: -40px;
+    color: var(--main-color);
+    border: 1px solid var(--section-background);
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.skills .container .pro_holder .pro span {
+    display: block;
+    height: 100%;
+    background-color: var(--main-color);
+
+}
+
+/* end skills */
+
+
+
 /* start animations */
 @keyframes up_down {
 
