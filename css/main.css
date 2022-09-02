@@ -1023,19 +1023,8 @@ a {
 
 .skills .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-@media (max-width:997px) {
-    .skills .container {
-        flex-direction: column;
-    }
-
-    .skills .container>div {
-        width: 100%;
-    }
 }
 
 .skills .container .pro_holder h4 {
@@ -1046,18 +1035,17 @@ a {
 }
 
 .skills .container .pro_container {
-    flex-basis: 60%;
+    flex: 1;
 }
 
 .skills .container .image {
-    flex-basis: 30%;
-    display: flex;
-    justify-content: flex-end;
+    width: 500px;
+
 }
 
-@media (max-width:997px) {
+@media (max-width:991px) {
     .skills .container .image {
-        justify-content: center;
+        display: none;
     }
 }
 
