@@ -1036,6 +1036,10 @@ a {
 
 .skills .container .pro_container {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .skills .container .image {
@@ -1049,10 +1053,10 @@ a {
     }
 }
 
+
 .skills .container .pro_holder .pro {
     background-color: var(--section-background);
     position: relative;
-
     height: 30px;
 }
 
@@ -1077,7 +1081,81 @@ a {
 
 /* end skills */
 
+/* start how work */
 
+.how_works {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--section-background);
+
+}
+
+.how_works .container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.how_works .container .image {
+    width: 500px;
+    display: flex;
+}
+
+@media (max-width:991px) {
+    .how_works .container .image {
+        display: none;
+    }
+
+}
+
+
+.how_works .container .image img {
+    max-width: 100%;
+}
+
+.how_works .container .works {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.how_works .container .works .box {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.how_works .container .works .box .icon {
+    width: 50px;
+    margin: 10px;
+}
+
+.how_works .container .works .box .icon img {
+    max-width: 100%;
+}
+
+.how_works .container .works .box .text {
+    flex: 1;
+
+}
+
+.how_works .container .works .box .text h3 {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.how_works .container .works .box .text p {
+    color: #777;
+    line-height: 1.8;
+}
+
+/* end how work */
 
 /* start animations */
 @keyframes up_down {
