@@ -1278,8 +1278,9 @@ a {
 
 @media(max-width:767px) {
     .last_events form {
-        max-width: 390px;
+        max-width: 360px;
         padding: 20px 20px;
+        gap: 15px;
     }
 }
 
@@ -1305,6 +1306,16 @@ a {
     border: none;
 }
 
+@media(max-width:767px) {
+    .last_events form input[type="submit"] {
+        padding: 10px 15px;
+    }
+
+    .last_events form input[type="email"] {
+        padding: 10px 15px;
+    }
+
+}
 
 /* end last_events  */
 
