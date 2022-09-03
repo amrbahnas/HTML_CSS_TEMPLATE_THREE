@@ -1370,6 +1370,12 @@ a {
     width: 100px;
 }
 
+@media (max-width:767px) {
+    .pricing>img {
+        display: none;
+    }
+}
+
 .pricing .container {
     display: grid;
     gap: 40px;
@@ -1416,7 +1422,7 @@ a {
     position: relative;
 }
 
-@media (max-width:767px) {
+@media (max-width:1200px) {
     .pricing .container .box:nth-child(2) {
         transform: translateY(0);
     }
@@ -1527,7 +1533,77 @@ a {
 
 /* end pricing */
 
+/* start videos */
+.videos {
+    padding-top: 50px;
+    padding-bottom: 50px;
 
+}
+
+.videos .container .holder {
+    display: flex;
+    background-color: var(--section-background);
+    border: 1px solid var(--section-background);
+}
+
+@media (max-width:1199px) {
+    .videos .container .holder {
+        flex-direction: column;
+    }
+}
+
+.videos .holder .video {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+.videos .holder .video .image img {
+    max-width: 100%;
+}
+
+.videos .holder .video .bottom {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.videos .holder .list .top {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.videos .holder .list .top p {
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.videos .holder .list .top i {
+    color: var(--main-color);
+}
+
+.videos .holder .list ul li {
+    background-color: white;
+    padding: 15px;
+    border-top: 2px solid var(--section-background);
+    cursor: pointer;
+
+}
+
+.videos .holder .list ul li span {
+    display: block;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* end videos */
 
 
 /* start animations */
