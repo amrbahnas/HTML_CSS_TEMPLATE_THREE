@@ -1772,6 +1772,10 @@ a {
     }
 }
 
+.discount .form form {
+    width: 300px;
+}
+
 .discount .form h2 {
     font-size: 30px;
     text-align: center;
@@ -1782,7 +1786,7 @@ a {
     display: block;
     width: 100%;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
     border-bottom: 2px solid #ccc;
     background-color: #f6f6f6;
@@ -1829,6 +1833,12 @@ footer {
     background-color: #191919;
 }
 
+@media (max-width:767px) {
+    footer {
+        text-align: center;
+    }
+}
+
 footer .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -1848,10 +1858,24 @@ footer .one h2 {
     margin-bottom: 15px;
 }
 
+@media (max-width:767px) {
+    footer .one h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+
+    }
+}
+
 footer .one .social {
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
+}
+
+@media (max-width:767px) {
+    footer .one .social {
+        justify-content: center;
+    }
 }
 
 footer .one .social a {
@@ -1912,6 +1936,17 @@ footer .three .box {
     margin-bottom: 20px;
 }
 
+@media (max-width:767px) {
+    footer .three .box {
+        flex-direction: column;
+    }
+
+    footer .three .box i {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+}
+
 footer .three .box i {
     color: var(--main-color);
 }
@@ -1920,6 +1955,9 @@ footer .three .box p {
     color: #b9b9b9;
 }
 
+footer .three .box p.main {
+    margin-bottom: 5px;
+}
 
 footer .four img {
     width: 68px;
