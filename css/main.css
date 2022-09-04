@@ -351,7 +351,8 @@ a {
 
 @media (max-width:767px) {
     .landing .container .img img {
-        display: none;
+        width: 100%;
+        transform: translateY(-170px);
     }
 }
 
@@ -373,6 +374,7 @@ a {
 
 .landing .container h1 {
     font-size: 50px;
+    text-transform: capitalize;
 }
 
 @media (max-width: 767px) {
@@ -387,7 +389,7 @@ a {
     margin: 5px 0 0;
     color: #666;
     max-width: 500px;
-    ;
+    text-transform: capitalize;
 }
 
 @media (max-width: 767px) {
